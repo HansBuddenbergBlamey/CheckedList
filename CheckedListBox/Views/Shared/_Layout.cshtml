@@ -1,0 +1,63 @@
+﻿@{
+
+}
+
+<!DOCTYPE html>
+
+<html lang="es">
+<!------------------------------------------------------------------------------------------------------------------------>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta charset="utf-8" />
+
+        <title>@ViewBag.Title - Metlife</title>
+
+        <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/Content/themes/base/jquery.ui.all.css")" rel="stylesheet" type="text/css" />
+        <link href="@Url.Content("~/views/shared/favicon.ico")" rel="shortcut icon" type="image/x-icon" />
+
+        <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+        <script src="@Url.Content("~/scripts/modernizr-2.7.2.js")" type="text/javascript"></script>
+
+        <meta name="viewport" content="width=device-width" />
+    </head>
+<!------------------------------------------------------------------------------------------------------------------------>
+    <body>
+        <header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title"><a href="http://www.metlife.cl"><img src="Images/MetLife_Logo.png" alt="www.metlife.cl" height="64"></a></p>
+                </div>
+                <div class="float-right">
+                    <section id="div">
+                        <br><br>
+                    </section>
+                    <!--<nav>
+                        <ul id="menu" style="">
+                            <li><a href="~/">Inicio</a></li>
+                            <li><a href="~/About">Acerca de</a></li>
+                            <li><a href="~/Contact">Contacto</a></li>
+                        </ul>
+                    </nav>-->
+                </div>
+            </div>
+        </header>
+
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - Global Integrator</p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+
+</html>

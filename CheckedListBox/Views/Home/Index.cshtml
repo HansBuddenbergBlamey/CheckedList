@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Benficiarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.Message</h2>
+
+@section featured {
+
+    <section class="featured">
+        <form id="frm" action="" method="post">
+
+
+
+        </form>
+    </section>
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@{
+    if (ViewBag.Checks != null)
+    {
+        <h3>Ok, we got your order:</h3>
+        foreach (string item in ViewBag.Checks)
+        {
+            <h4>@item</h4>
+        }
+    }
+}
+
+
+<form method="post">
+
+    What do you want to eat?
+    <br />
+    <br />
+    @{ Html.RenderAction("Checks", new { values = new string[] { "Chicken", "Pizza", "Burger", "Kebab" }, name = "MyCheckList" }); }
+    <br />
+    <br />
+    <input id="Submit1" type="submit" value="Submit" />
+</form>
